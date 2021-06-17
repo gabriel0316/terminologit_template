@@ -36,15 +36,15 @@
     },
     {
       "name": "claml",
-      "description": "ClaML Representation"
+      "description": "ClaML v3 Representation"
     },
     {
       "name": "fsh",
-      "description": "FSH Representation"
+      "description": "FSH v1 Representation"
     },
     {
       "name": "csv",
-      "description": "CSV Representation"
+      "description": "PropCSV v1 Representation"
     }
   ],
   "_pre-process-documentation": "This array of objects indicates data being converted from existing files using scripts to support dependency checking when performing continuous builds",

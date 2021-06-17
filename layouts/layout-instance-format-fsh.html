@@ -5,8 +5,14 @@
 {% assign section = '7' %}
 {% elsif '{{[fmt]}}' == 'json' %}
 {% assign section = '8' %}
-{% else %}
+{% elsif '{{[fmt]}}' == 'ttl' %}
 {% assign section = '9' %}
+{% elsif '{{[fmt]}}' == 'fsh' %}
+{% assign section = '10' %}
+{% elsif '{{[fmt]}}' == 'claml' %}
+{% assign section = '11' %}
+{% else %}
+{% assign section = '12' %}
 {% endif %}
 
 {% include fragment-pagebegin.html %}
