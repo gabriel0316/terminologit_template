@@ -49,8 +49,8 @@
   {% endif %}
 {% endunless %}
 
-<!-- GKL begin -->
-{% unless include.showfsh == 'n' %}
+<!-- TerminoloGit begin -->
+{% if include.showfsh == 'y' %}
   {% if include.active == 'fsh' %}
     <li class="active">
       <a href="#">FSH v1</a>
@@ -60,9 +60,9 @@
       <a href="{{include.type}}-{{include.id}}.fsh.html">FSH v1</a>
     </li>
   {% endif %}
-{% endunless %}
+{% endif %}
 
-{% unless include.showclaml == 'n' %}
+{% if include.showclaml == 'y' %}
   {% if include.active == 'claml' %}
     <li class="active">
       <a href="#">ClaML v3</a>
@@ -72,9 +72,9 @@
       <a href="{{include.type}}-{{include.id}}.claml.html">ClaML v3</a>
     </li>
   {% endif %}
-{% endunless %}
+{% endif %}
 
-{% unless include.showcsv == 'n' %}
+{% if include.showcsv == 'y' %}
   {% if include.active == 'csv' %}
     <li class="active">
       <a href="#">PropCSV v1</a>
@@ -84,8 +84,8 @@
       <a href="{{include.type}}-{{include.id}}.csv.html">PropCSV v1</a>
     </li>
   {% endif %}
-{% endunless %}
-<!-- GKL end -->
+{% endif %}
+<!-- TerminoloGit end -->
 
 {% if  site.data.resources[resource_].['history'] %}
   {% if include.active == 'history' %}
