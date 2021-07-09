@@ -81,7 +81,7 @@
       "transform": "template/scripts/processPages.xslt"
     },
     {
-      "folder": "input/otherFormats",
+      "folder": "input/additionalFormats",
       "relativePath": ""
     }
   ],
