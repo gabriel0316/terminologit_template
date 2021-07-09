@@ -50,7 +50,7 @@
 {% endunless %}
 
 <!-- TerminoloGit begin -->
-{% if include.showfsh == 'y' %}
+{% if include.showAdditionalFormats == 'y' %}
   {% if include.active == 'fsh' %}
     <li class="active">
       <a href="#">FSH v1</a>
@@ -60,9 +60,7 @@
       <a href="{{include.type}}-{{include.id}}.fsh.html">FSH v1</a>
     </li>
   {% endif %}
-{% endif %}
 
-{% if include.showclaml == 'y' %}
   {% if include.active == 'claml' %}
     <li class="active">
       <a href="#">ClaML v3</a>
@@ -72,9 +70,7 @@
       <a href="{{include.type}}-{{include.id}}.claml.html">ClaML v3</a>
     </li>
   {% endif %}
-{% endif %}
 
-{% if include.showcsv == 'y' %}
   {% if include.active == 'csv' %}
     <li class="active">
       <a href="#">PropCSV v1</a>

@@ -12,11 +12,18 @@
 {% endif %}
 
 {% include fragment-pagebegin.html %}
-<div style="counter-reset: section 10" class="col-12">
+<div style="counter-reset: section {{section}}" class="col-12">
   <div class="alert alert-warning" role="alert">
     <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
   </div>
-{% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='fsh' showAdditionalFormats='y' %}
+<!-- TerminoloGit begin -->
+<!-- Currently, only CodeSystem is supported to show additionalFormats-->
+{% if '{{[type]}}' == 'CodeSystem' %}
+  {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='{{[fmt]}}' showAdditionalFormats='y' %}
+{% else %}
+  {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='{{[fmt]}}' %}
+{% endif %}
+<!-- TerminoloGit end -->
 
 <a name="root"> </a>
 {% if site.data.artifacts[page.path].example %}
@@ -25,12 +32,12 @@
 {% assign prefix = site.data.artifacts[page.path].type %}
 <h2 id="root">{{example}}{{prefix}}: {{site.data.pages[page.path].title}}</h2>
 
-<p><a href="{{[type]}}-{{[id]}}.fsh" no-download="true">Raw FSH</a> | <a href="{{[type]}}-{{[id]}}.fsh" download>Download</a></p>
+<p><a href="{{[type]}}-{{[id]}}.{{[fmt]}}" no-download="true">Raw {{[fmt]}}</a> | <a href="{{[type]}}-{{[id]}}.{{[fmt]}}" download>Download</a></p>
 
   <!-- insert intro if present -->
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
 
-  {% include {{[type]}}-{{[id]}}-fsh-html.xhtml %}
+  {% include {{[type]}}-{{[name]}}.xhtml %}
 
   <!-- insert notes if present -->
   {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' %}
