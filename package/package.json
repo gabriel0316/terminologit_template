@@ -1,10 +1,10 @@
 ﻿{
-  "name": "gkl.base.template",
+  "name": "terminologit.base.template",
   "type": "fhir.template",
   "license": "CC0-1.0",
-  "description": "GKL",
+  "description": "TerminoloGit Template",
   "author": "http://elga.gv.at",
-  "canonical": "http://fhir.org/templates/fhir.base.template",
+  "canonical": "https://github.com/gabriel0316/terminologit_template",
   "base": "https://github.com/gabriel0316/hl7at_template",
   "dependencies": {
     "https://github.com/gabriel0316/hl7at_template": "current"
